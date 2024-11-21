@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -83,6 +84,12 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count)
             {
+                if(s.toString( ).startsWith("##"))
+                    hexValueEditText.setText(s.toString( ).substring(1));
+                else if (!s.toString( ).startsWith("#"))
+                {
+                    hexValueEditText.setText("#" + s);
+                }
             }
             
             @Override
@@ -91,6 +98,8 @@ public class MainActivity extends AppCompatActivity
                 onTextChange(s.toString( ));
             }
         });
+        
+        Toast.makeText(this, "Long press on background to disable settings", Toast.LENGTH_LONG).show( );
     }
     
     private void onTextChange(String colorString)
@@ -173,6 +182,7 @@ public class MainActivity extends AppCompatActivity
     
     public void onSliderChange(Slider slider, int value, int sliderNumber)
     {
+        clearFocusAndHideKeyboard(hexValueEditText);
         switch (sliderNumber)
         {
             default:
