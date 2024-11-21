@@ -11,7 +11,7 @@
 - **Versatile Use**: Ideal as a nightlight, mood lamp, or for creative photography.
 
 ## Installation
-1. [Download]() the latest APK file.
+1. [Download](https://github.com/mati101811/OneColorScreen/raw/refs/heads/master/release/OneColorScreen.apk) the latest APK file.
 2. Transfer the APK to your Android device if necessary.
 3. Open the APK file on your device and follow the installation prompts.  
    *Make sure to enable "Install Unknown Apps" if prompted.*
